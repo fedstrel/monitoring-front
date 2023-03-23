@@ -1,0 +1,35 @@
+.NumericUpDown {
+    display: grid;
+    grid-template-areas: 
+    "v v v v b";
+
+    margin: 5px 10px;
+    width: 30%;
+}
+
+.ValueZone {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    background-color: #FFF;
+    font-size: 72pt;
+    border: 2px ridge #000;
+    margin: 0px 10px;
+
+    grid-area: v;
+    width: 4fr;
+}
+
+.ButtonArea {
+    display: flex;
+    flex-direction: column;
+
+    grid-area: b;
+    width: 1fr;
+}
+
+.ButtonStyle {
+    height: 50%;
+    font-size: 36pt;
+}

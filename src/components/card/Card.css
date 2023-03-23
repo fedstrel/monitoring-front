@@ -1,0 +1,27 @@
+.Card {
+    grid-area: c;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: 2px ridge #000;
+}
+
+.NumArea {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#CurEff {
+    font-size: 108pt;
+}
+
+#AvgEff {
+    font-size: 72pt;
+}
