@@ -16,9 +16,15 @@ const App = () => {
     console.log("I am alive");
     console.log(data);
 
+    tmpEffData.push(<tr key={-1}>
+      <td>Время</td>
+      <td>Эффективность</td>
+      </tr>);
+
     for (let i = 0; i < data.length; i++) {
+      let d = new Date(data[i].periodStart);
       tmpEffData.push(<tr key={i}>
-        <td>{data[i].periodStart}</td>
+        <td>{d.toLocaleString()}</td>
         <td>{data[i].efficiency}</td>
         </tr>);
     }

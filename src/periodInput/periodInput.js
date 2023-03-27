@@ -24,8 +24,8 @@ const PeriodInput = ({carId, showDataCallback}) => {
             <form>
                 <p>Начало <input placeholder={placeholder} onChange={(e) => setPeriodStart(e.target.value)}/></p>
                 <p>Конец <input placeholder={placeholder} onChange={(e) => setPeriodEnd(e.target.value)}/></p>
-                <p><input type="radio" value="hours" onClick={() => setAggregateHours(true)}></input> По часам</p>
-                <p><input type="radio" value="weeks" onClick={() => setAggregateHours(false)}></input> По неделям</p>
+                <p><input type="radio" onClick={() => {setAggregateHours(true)}}></input> По часам</p>
+                <p><input type="radio" onClick={() => setAggregateHours(false)}></input> По неделям</p>
                 <button onClick={getEfficiencyRecords} type='button'>Анализировать</button>
             </form>
         </div>

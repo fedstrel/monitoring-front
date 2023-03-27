@@ -1,4 +1,4 @@
-.App {
+/* .App {
   display: grid;
 
   grid-template-areas: 
@@ -20,4 +20,8 @@
   display: grid;
   align-items: start;
   grid-gap: 10px;
+} */
+
+td {
+  border: 1px solid #000;
 }
