@@ -7,7 +7,7 @@ import DropDownList from './components/dropDownList/dropDownList';
 import PeriodInput from './periodInput/periodInput';
 
 const App = () => {
-  const [carId, setCarId] = useState();
+  const [carId, setCarId] = useState(1);
   const [tableContent, setTableContent] = useState([]);
 
   function showData(data) {
