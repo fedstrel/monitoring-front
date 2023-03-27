@@ -1,3 +1,4 @@
+import React from 'react';
 import { useContext } from 'react';
 import { appContext } from '../../context/appContext';
 import './Card.css';

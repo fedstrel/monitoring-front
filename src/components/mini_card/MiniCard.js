@@ -1,3 +1,4 @@
+import React from 'react';
 import { useContext, useState, useEffect } from 'react';
 import { appContext } from '../../context/appContext';
 import SockJS from 'sockjs-client';

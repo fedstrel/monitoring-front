@@ -1,3 +1,4 @@
+import React from 'react';
 import { useState, useEffect, useContext } from 'react';
 import { appContext } from '../../context/appContext';
 import MiniCard from '../mini_card/MiniCard';

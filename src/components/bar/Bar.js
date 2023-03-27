@@ -1,8 +1,13 @@
+import React from 'react';
 import { useEffect } from 'react';
 import NumericUpDown from '../numeric_up_down/NumericUpDown';
 import './Bar.css';
 
 const Bar = ({name, paramId, lowerBound, upperBound, step, initialValue}) => {
+
+  useEffect(() => {
+
+  }, [initialValue]);
 
   return (
     <div className="Bar">

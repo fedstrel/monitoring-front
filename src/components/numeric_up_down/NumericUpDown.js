@@ -1,13 +1,18 @@
+import React from 'react';
 import { useContext, useEffect, useState } from 'react';
 import { appContext } from '../../context/appContext';
 import './NumericUpDown.css';
 
 const NumericUpDown = ({paramId, lowerBound, upperBound, step, initialValue}) => {   
     const [currentValue, setCurrentValue] = useState();
-    const {curThreadId, paramsData, setParamsData} = useContext(appContext);
+    const {curThread, paramsData, setParamsData} = useContext(appContext);
+
+    useEffect(() => {
+        setCurrentValue(initialValue);
+    }, [initialValue]);   
 
     if (currentValue == undefined)
-        setCurrentValue(initialValue);      
+            setCurrentValue(initialValue);
 
     function plusStep() {
         if (currentValue + step <= upperBound) {
@@ -24,14 +29,14 @@ const NumericUpDown = ({paramId, lowerBound, upperBound, step, initialValue}) =>
     }
 
     function setContextParams() {
-        let data = paramsData;
-            for (let i = 0; i < data.length; i++) {
-                if (data[i].id === curThreadId) {
-                    data[i].paramsData[paramId] = currentValue;
-                    setParamsData(data);
-                    return;
-                }
+        let tmpData = paramsData;
+        for (let i = 0; i < tmpData.length; i++) {
+            if (tmpData[i].id == curThread) {
+                tmpData[i].data[paramId] = currentValue;
+                setParamsData(tmpData);
+                return;
             }
+        }
     }
 
     return (
